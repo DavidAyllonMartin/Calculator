@@ -90,7 +90,7 @@ public class ExpressionEvaluator {
     public static String cleanExpression(String expression) {
         StringBuilder balancedExpression = new StringBuilder(expression);
         if (expression.startsWith("-(")){
-            balancedExpression.replace(0, 1, "-1" + TIMES_OPERATOR + "(");
+            balancedExpression.replace(0, 1, "0-(");
         }
 
         while (true){
