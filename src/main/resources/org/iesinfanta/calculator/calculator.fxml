@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="298.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesinfanta.calculator.CalculatorController">
+   <children>
+      <VBox layoutX="99.0" layoutY="155.0" styleClass="vbox" stylesheets="@styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="primaryDisplay" styleClass="primaryDisplay" textOverrun="LEADING_ELLIPSIS">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="secondaryDisplay" styleClass="secondaryDisplay" stylesheets="@styles.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <GridPane styleClass="gridPane" stylesheets="@styles.css">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="1" GridPane.rowIndex="3" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="4" GridPane.rowIndex="2" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="7" GridPane.rowIndex="1" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNumberClick" styleClass="number" stylesheets="@styles.css" text="0" GridPane.rowIndex="4" />
+
+
+                   <Button mnemonicParsing="false" onMouseClicked="#onNotMinusOperatorClick" styleClass="operator" stylesheets="@styles.css" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onMinusClick" styleClass="operator" stylesheets="@styles.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNotMinusOperatorClick" styleClass="operator" stylesheets="@styles.css" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onNotMinusOperatorClick" styleClass="operator" stylesheets="@styles.css" text="÷" GridPane.columnIndex="3" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onEqualsClick" styleClass="operator" stylesheets="@styles.css" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onPointClick" styleClass="number" stylesheets="@styles.css" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                   <Button mnemonicParsing="false" onMouseClicked="#onLeftBracketClick" styleClass="operator" stylesheets="@styles.css" text="(" GridPane.columnIndex="1" />
+                   <Button mnemonicParsing="false" onMouseClicked="#onRightBracketClick" styleClass="operator" stylesheets="@styles.css" text=")" GridPane.columnIndex="2" />
+
+                   <Button mnemonicParsing="false" onMouseClicked="#onAcClick" styleClass="ac" stylesheets="@styles.css" text="AC" />
+                   <Button mnemonicParsing="false" onMouseClicked="#OnDelClick" styleClass="number" stylesheets="@styles.css" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                   <graphic>
+                       <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                               <Image url="@img/delete.png" />
+                           </image>
+                       </ImageView>
+                   </graphic>
+                   </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

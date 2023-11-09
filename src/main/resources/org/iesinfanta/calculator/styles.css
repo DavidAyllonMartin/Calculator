@@ -1,0 +1,55 @@
+.root {
+    -fx-background-color: #ffffff;
+}
+
+.vbox {
+    -fx-alignment: center;
+    -fx-pref-height: 200.0;
+    -fx-pref-width: 100.0;
+}
+
+.gridPane {
+    -fx-alignment: center;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+.primaryDisplay {
+    -fx-font: 25.0 Arial;
+    -fx-background-radius: 10;
+    -fx-background-color: rgb(246, 246, 246);
+    -fx-border-width: 2;
+    -fx-alignment: bottom-right;
+    -fx-pref-height: 50.0;
+    -fx-pref-width: 428.0;
+}
+
+.secondaryDisplay {
+    -fx-font: 28.0 Arial;
+    -fx-text-fill: grey;
+    -fx-alignment: bottom-right;
+    -fx-pref-height: 50.0;
+    -fx-pref-width: 428.0;
+}
+
+.button {
+    -fx-pref-height: 55.0;
+    -fx-pref-width: 55.0;
+    -fx-background-radius: 30;
+    -fx-font: 24.0 Arial;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 2, 0, 1, 1);
+}
+
+.button.operator {
+    -fx-background-color: #dff2fd;
+}
+
+.button.ac {
+    -fx-background-color: #ffc8fd;
+    -fx-font-size: 20.0;
+}
+
+.button.number {
+    -fx-background-color: #f5f5f5;
+}
